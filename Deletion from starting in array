@@ -1,0 +1,38 @@
+#include<stdio.h>
+void main()
+{
+    int a[50],size,i;
+    printf("Enter the size of array : \n");
+    scanf("%d",&size);
+    printf("Enter the elememts one by one : \n");
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("elememts are  : \n");
+    for(i=0;i<size;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+    if (size>50)
+    {
+        printf("Overflow condition");
+    }
+    else
+    {   
+        int item = a[0];
+        for(i=0;i<size-1;i++)
+        {
+            a[i] = a[i+1];
+
+        }
+        size--;
+        printf("\nelememts are  : \n");
+        for(i=0;i<size;i++)
+        {
+            printf("%d\t",a[i]);
+        }
+        printf("\nDeleted itme : %d",item);
+
+    }
+}
